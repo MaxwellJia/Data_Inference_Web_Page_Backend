@@ -62,7 +62,7 @@ For any questions or suggestions, feel free to contact me at maxwelljia1@gmail.c
 
 This project is built to infer data type of the columns in a csv file using React+Django, this is the frontend
 
-of the web page. The backend is in https://github.com/MaxwellJia/Data_Inference_Web_Page_Backend.
+of the web page. The frontend is in https://github.com/MaxwellJia/Data_Inference_Web_Page_Frontend.
 
 The input of this project is a csv file, and the webpage will then show the results of inferred data types. Next,
 
