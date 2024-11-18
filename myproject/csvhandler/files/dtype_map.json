@@ -1,0 +1,1 @@
+{"Name": "object", "Birthdate": "datetime64[ns]", "Score": "Int64", "Grade": "category", "Body_Height": "float32", "Keep_Days": "timedelta64[ns]", "Gender": "bool", "Attended": "bool", "Complex": "complex128", "consultation_timestamp": "datetime64[ns, UTC]", "Good?": "bool", "Phone": "object"}
