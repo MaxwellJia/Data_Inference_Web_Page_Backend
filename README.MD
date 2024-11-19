@@ -30,7 +30,7 @@ Backend: [Data_Inference_Web_Page_Backend](https://github.com/MaxwellJia/Data_In
 4. Download: After confirming the changes, the backend enforces the conversions and provides the modified file for download.
 
 ### Workflow Picture
-![Workflow](React+Django.drawio.png)
+![Workflow](Work_Flow.drawio.png)
 
 ## Installation
 
