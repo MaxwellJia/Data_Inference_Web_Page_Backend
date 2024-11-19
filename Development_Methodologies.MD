@@ -9,6 +9,9 @@
 3. Set relative universal urls in myproject
 4. Put processor in csvhandler for processing data
 
+### Work Flow
+![Work flow](Work_Flow.drawio.png)
+
 ### Urls and Views
 Create sub urls and views to:
 1. Receive data from the frontend
