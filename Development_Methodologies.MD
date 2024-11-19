@@ -63,13 +63,13 @@ The specific achievements are in [infer_functions](myproject/csvhandler/processo
 
 bool: Determine if a column is a Boolean or has only two non-null values and in global [BOOLEAN_SET](myproject/csvhandler/processor/global_variables.py)
 
-int: determine whether it's number first using pandas, then check if the decimal part is included, and judge what range it is in(64,32,16,8). NaN will be converted to <NA>.
+int: determine whether it's number first using pandas, then check if the decimal part is included, and judge what range it is in(64,32,16,8). NaN will be converted to "<NA>".
 
 float: determine whether it's number first using pandas, then judge what range it is in(64,32). Keep a maximum of six decimal places in the end.
 
 datetime: Checks if all value in the column can be successfully converted to date format, and converts the column. Also, it will try to convert by the [DATA_FORMAT](myproject/csvhandler/processor/global_variables.py) asked, convert by default if there is not.
 
-category: Determine whether the number of unique values is below the [MAX_THRESHOLD](myproject/csvhandler/processor/global_variables.py)(3 by default) and bigger than the [MIN_THRESHOLD](myproject/csvhandler/processor/global_variables.py)(4 by default)
+category: Determine whether the number of unique values is below the [MAX_THRESHOLD](myproject/csvhandler/processor/global_variables.py)(4 by default) and bigger than the [MIN_THRESHOLD](myproject/csvhandler/processor/global_variables.py)(3 by default)
 
 complex: Converts a column to complex type if all non-null values are parsable as complex numbers and not of type int or float.
 
