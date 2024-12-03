@@ -42,6 +42,9 @@ The [processor](myproject/csvhandler/processor) can be viewed an independent pyt
 then it infers data types in the following order: bool, int(64,32,16,8), float(64,32), datetime, category, complex and timedelta.
 The specific steps and methodologies are as follows.
 
+### Data Flow of Processor
+![Data Flow of Processor](Processor.png)
+
 ### Global Variables
 There are some global variables in [global_variables](myproject/csvhandler/processor/global_variables.py) and also some explanations.
 You can modify it to make the results more desirable.

@@ -165,7 +165,6 @@ class CSVSaveViewAndDownload(APIView):
         if updated_map != dtype_map:
             # Detect differences between the original and updated data type dict
             difference_map = get_differences(updated_map, dtype_map)
-            print(difference_map)
 
             # Perform specific type coercion based on the differences
             df = forced_to_bool(df, difference_map)

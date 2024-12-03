@@ -214,7 +214,7 @@ def convert_to_categorical(column):
     # Gets the number of unique values in the column that are not null
     unique_count = column.nunique(dropna=True)
 
-    # Determine whether the number of unique values is below the threshold
+    # Determine whether the number of unique values is below the max threshold and bigger than the min threshold
     if MAX_THRESHOLD >= unique_count >= MIN_THRESHOLD:
             return column.astype('category')  # return category type if yes
     return column  # Or return the original column
@@ -295,7 +295,7 @@ def convert_to_timedelta(column):
        NaN will be converted to NaT
        Must be put at the last, because it will convert int or float to timedelta
         """
-    # 创建一个包含 TIME_UNITS 中所有单位的正则表达式模式
+    # Create a regular expression pattern that includes all the units in the TIME_UNITS
     time_units_pattern = '|'.join([f"{unit}s?" for unit in TIME_UNITS])
 
     # Check if contains 'days', 'hours', 'minutes' time units

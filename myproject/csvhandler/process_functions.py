@@ -1,3 +1,6 @@
+from csvhandler.models import Student
+
+
 def map_dtypes_to_user_friendly_names(dtype_map):
     """
     Maps Pandas dtypes to user-friendly names.
@@ -100,5 +103,4 @@ def get_differences(updated_map, DTYPES_MAP):
             result[key] = value
 
     return result
-
 
