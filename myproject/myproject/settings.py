@@ -64,6 +64,7 @@ CORS_ALLOW_ALL_ORIGINS = True  # Allow requests from all origins, should be more
 
 # ALLOWED_HOSTS defines which domains can access your Django app (use '*' for all domains in development)
 ALLOWED_HOSTS = ['*']  # Allow all hosts in development, but should be restricted to specific domain names in production
+STATIC_ROOT = './static/'
 
 # DEBUG setting - turns on debugging and detailed error messages (set to False in production)
 DEBUG = True  # Enable debug mode for more detailed error messages during development
