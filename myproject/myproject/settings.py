@@ -1,6 +1,8 @@
 # INSTALLED_APPS configuration list. Contains Django default apps and your own applications.
 import os
 
+from sympy import false
+
 INSTALLED_APPS = [
     # Django default applications configuration
     'django.contrib.admin',  # Django admin site for managing your models and data through a UI
@@ -52,7 +54,7 @@ TEMPLATES = [
 
 # STATIC_URL configuration, used for serving static files
 STATIC_URL = '/static/'  # The URL path for static files (CSS, JS, images)
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join('./../myproject', 'staticfiles')
 # Optional: If you need to load static files in development, you can specify directories here
 # if DEBUG:
 #     STATICFILES_DIRS = [
@@ -67,13 +69,13 @@ ALLOWED_HOSTS = ['*']  # Allow all hosts in development, but should be restricte
 STATIC_ROOT = './static/'
 
 # DEBUG setting - turns on debugging and detailed error messages (set to False in production)
-DEBUG = True  # Enable debug mode for more detailed error messages during development
+DEBUG = false  # Enable debug mode for more detailed error messages during development
 
 # ROOT_URLCONF configuration to specify the root URL configuration module
 ROOT_URLCONF = 'myproject.urls'  # Defines the URL routing for the project
 
 # SECRET_KEY is used for cryptographic operations such as signing cookies, tokens, etc. (keep it secure)
-SECRET_KEY = '123456'  # Change this to a secure, random key in production
+SECRET_KEY = '147258j'  # Change this to a secure, random key in production
 
 # DATABASE configuration for connecting to the database
 DATABASES = {
