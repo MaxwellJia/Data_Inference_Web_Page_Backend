@@ -1,4 +1,6 @@
 # INSTALLED_APPS configuration list. Contains Django default apps and your own applications.
+import os
+
 INSTALLED_APPS = [
     # Django default applications configuration
     'django.contrib.admin',  # Django admin site for managing your models and data through a UI
@@ -50,7 +52,7 @@ TEMPLATES = [
 
 # STATIC_URL configuration, used for serving static files
 STATIC_URL = '/static/'  # The URL path for static files (CSS, JS, images)
-
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Optional: If you need to load static files in development, you can specify directories here
 # if DEBUG:
 #     STATICFILES_DIRS = [
