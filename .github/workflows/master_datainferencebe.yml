@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - DataInference
+name: Build and deploy Python app to Azure Web App - DataInferenceBE
 
 on:
   push:
@@ -68,14 +68,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1EC7994F2101465E8B522AAEFFCA516E }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_95B17B2E7D894CDEA74F2078A169CFBE }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F425B5E10E9A40469DE7501204926669 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AF806E0F106D4601A50074F36B0DCBFA }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E55C9DC0943F4870B443C0F7DBAE47C5 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CEF93EE098CC4DD5A644965F38C8DBA7 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'DataInference'
+          app-name: 'DataInferenceBE'
           slot-name: 'Production'
           
