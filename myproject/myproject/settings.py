@@ -12,6 +12,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',  # Message framework for passing notifications between requests
     'django.contrib.staticfiles',  # Static files handling (CSS, JavaScript, images)
 
+
+    'whitenoise.runserver_nostatic', # white noise for azure
+
     # Your custom applications
     'csvhandler',  # My custom app for handling CSV file processing
     'rest_framework',  # Django REST Framework for building RESTful APIs
@@ -25,6 +28,7 @@ MIDDLEWARE = [
 
     # Django default middleware for security, session, authentication, and other functionalities
     'django.middleware.security.SecurityMiddleware',  # Security middleware to handle HTTP security headers
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',  # Manages sessions between requests for user data
     'django.contrib.auth.middleware.AuthenticationMiddleware',  # Handles user authentication across requests
     'django.contrib.messages.middleware.MessageMiddleware',  # Handles message notifications across requests
@@ -52,13 +56,14 @@ TEMPLATES = [
     },
 ]
 
-# STATIC_URL configuration, used for serving static files
-STATIC_URL = '/static/'  # The URL path for static files (CSS, JS, images)
-STATIC_ROOT = os.path.join('./../myproject', 'staticfiles')
-# Optional: If you need to load static files in development, you can specify directories here
+# STATIC_URL configuration, used for serving staticfiles files
+STATIC_URL = './static'  # The URL path for staticfiles files (CSS, JS, images)
+STATIC_ROOT = os.path.join('./../staticfiles', 'staticfiles')
+
+# Optional: If you need to load staticfiles files in development, you can specify directories here
 # if DEBUG:
 #     STATICFILES_DIRS = [
-#         BASE_DIR / "static",  # Your static files directory
+#         BASE_DIR / "staticfiles",  # Your staticfiles files directory
 #     ]
 
 # CORS configuration - Allow cross-origin requests from all domains (useful for development)
@@ -66,7 +71,7 @@ CORS_ALLOW_ALL_ORIGINS = True  # Allow requests from all origins, should be more
 
 # ALLOWED_HOSTS defines which domains can access your Django app (use '*' for all domains in development)
 ALLOWED_HOSTS = ['*']  # Allow all hosts in development, but should be restricted to specific domain names in production
-STATIC_ROOT = './static/'
+
 
 # DEBUG setting - turns on debugging and detailed error messages (set to False in production)
 DEBUG = false  # Enable debug mode for more detailed error messages during development
@@ -89,7 +94,14 @@ DATABASES = {
     }
 }
 
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 
+STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
 
