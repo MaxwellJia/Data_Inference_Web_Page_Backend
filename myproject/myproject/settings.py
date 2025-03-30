@@ -16,7 +16,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic', # white noise for azure
 
     # Your custom applications
-    'csvhandler',  # My custom app for handling CSV file processing
+    'myproject.csvhandler',  # My custom app for handling CSV file processing
     'rest_framework',  # Django REST Framework for building RESTful APIs
     'corsheaders',  # Middleware for handling cross-origin requests (CORS)
     'myproject'  # The main project app (if any)
@@ -85,7 +85,7 @@ SECRET_KEY = '147258j'  # Change this to a secure, random key in production
 # DATABASE configuration for connecting to the database
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',  # Database backend, here we use PostgreSQL (change to MySQL if needed)
+#         'ENGINE': 'django.db.backends.postgresql',  # Database myproject, here we use PostgreSQL (change to MySQL if needed)
 #         'NAME': 'postgres',  # The name of the database
 #         'USER': 'postgres',  # Database username
 #         'PASSWORD': 'Thisiswangtao',  # Database password
