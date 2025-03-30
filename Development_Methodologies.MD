@@ -5,7 +5,7 @@
 
 ### Initialization
 1. Using django-admin startproject similar codes to initialize the project and install dependencies, libraries and so on.(Django base start project)
-2. Create relative [settings](myproject/settings.py) to set initializing variables
+2. Create relative [settings](myproject/myproject/settings.py) to set initializing variables
 3. Set relative universal urls in myproject
 4. Put processor in csvhandler for processing data
 

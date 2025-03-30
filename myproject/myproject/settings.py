@@ -57,8 +57,8 @@ TEMPLATES = [
 ]
 
 # STATIC_URL configuration, used for serving staticfiles files
-STATIC_URL = './static'  # The URL path for staticfiles files (CSS, JS, images)
-STATIC_ROOT = os.path.join('./../myproject/staticfiles', 'staticfiles')
+STATIC_URL = './static/'  # The URL path for staticfiles files (CSS, JS, images)
+STATIC_ROOT = os.path.join('./', 'staticfiles')
 
 # Optional: If you need to load staticfiles files in development, you can specify directories here
 # if DEBUG:
@@ -77,31 +77,28 @@ ALLOWED_HOSTS = ['*']  # Allow all hosts in development, but should be restricte
 DEBUG = false  # Enable debug mode for more detailed error messages during development
 
 # ROOT_URLCONF configuration to specify the root URL configuration module
-ROOT_URLCONF = 'urls'  # Defines the URL routing for the project
+ROOT_URLCONF = 'myproject.urls'  # Defines the URL routing for the project
 
 # SECRET_KEY is used for cryptographic operations such as signing cookies, tokens, etc. (keep it secure)
 SECRET_KEY = '147258j'  # Change this to a secure, random key in production
 
 # DATABASE configuration for connecting to the database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Database backend, here we use PostgreSQL (change to MySQL if needed)
-        'NAME': 'postgres',  # The name of the database
-        'USER': 'postgres',  # Database username
-        'PASSWORD': 'Thisiswangtao',  # Database password
-        'HOST': 'database-1-instance-1.c1gce6c08np7.ap-southeast-2.rds.amazonaws.com',  # Database host (RDS endpoint for example)
-        'PORT': '5432',  # Database port (default PostgreSQL port is 5432)
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # Database backend, here we use PostgreSQL (change to MySQL if needed)
+#         'NAME': 'postgres',  # The name of the database
+#         'USER': 'postgres',  # Database username
+#         'PASSWORD': 'Thisiswangtao',  # Database password
+#         'HOST': 'database-1-instance-1.c1gce6c08np7.ap-southeast-2.rds.amazonaws.com',  # Database host (RDS endpoint for example)
+#         'PORT': '5432',  # Database port (default PostgreSQL port is 5432)
+#     }
+# }
 
 STORAGES = {
-    # ...
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
 
-
-STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
 
