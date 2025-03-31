@@ -6,5 +6,9 @@ cd /home/site/wwwroot
 # 安装依赖
 pip install -r requirements.txt
 
-# 启动Gunicorn
-gunicorn --bind=0.0.0.0:8000 myproject.myproject.wsgi --chdir /home/site/wwwroot
+cd /home/site/wwwroot/myproject
+
+# 启动Gunicorn --chdir /home/site/wwwroot/myproject
+gunicorn --bind=0.0.0.0:8000 myproject.wsgi
+
+#cd /home/site/wwwroot/myproject
