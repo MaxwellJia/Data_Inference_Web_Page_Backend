@@ -100,10 +100,10 @@ STORAGES = {
     },
 }
 
-import os
-import sys
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(os.path.join(BASE_DIR, "myproject"))  # 确保 csvhandler 可被找到
+# import os
+# import sys
+#
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.append(os.path.join(BASE_DIR, "myproject"))  # 确保 csvhandler 可被找到
 
 
