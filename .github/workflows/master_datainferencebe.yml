@@ -28,8 +28,8 @@ jobs:
         with:
           name: python-app
           path: |
-            .  # 直接上传源码
-            !venv/
+            *  # 上传当前目录下的所有文件
+            **/*  # 递归上传所有子目录
 
   deploy:
     runs-on: ubuntu-latest
