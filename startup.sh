@@ -11,4 +11,4 @@ cd /home/site/wwwroot/myproject
 # 启动Gunicorn --chdir /home/site/wwwroot/myproject
 gunicorn --bind=0.0.0.0:8000 myproject.wsgi
 
-#cd /home/site/wwwroot/myproject
+cd /home/site/wwwroot/myproject
