@@ -5,3 +5,4 @@ numpy==1.23.5
 gunicorn==20.1.0
 whitenoise==6.6.0
 sympy==1.12  # 或其他兼容版本
+corsheaders==4.7.0

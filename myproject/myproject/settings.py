@@ -16,7 +16,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic', # white noise for azure
 
     # Your custom applications
-    'myproject.csvhandler',  # My custom app for handling CSV file processing
+    'csvhandler',  # My custom app for handling CSV file processing
     'rest_framework',  # Django REST Framework for building RESTful APIs
     'corsheaders',  # Middleware for handling cross-origin requests (CORS)
     'myproject'  # The main project app (if any)
