@@ -56,6 +56,14 @@ TEMPLATES = [
     },
 ]
 
+# Allow some front end to access back end in Azure
+CSRF_TRUSTED_ORIGINS = [
+    "https://icy-tree-0067c3610.6.azurestaticapps.net"
+]
+
+CSRF_COOKIE_SECURE = True  # 仅在 HTTPS 传输
+
+
 # STATIC_URL configuration, used for serving staticfiles files
 STATIC_URL = './static/'  # The URL path for staticfiles files (CSS, JS, images)
 STATIC_ROOT = os.path.join('./', 'staticfiles')
