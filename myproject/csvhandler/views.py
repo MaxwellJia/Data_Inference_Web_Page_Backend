@@ -10,6 +10,8 @@ from django.http import HttpResponse, JsonResponse
 import io
 from csvhandler.process_functions import map_user_friendly_names_to_dtypes, get_differences
 from csvhandler.process_functions import map_dtypes_to_user_friendly_names
+from django.views.decorators.csrf import csrf_exempt
+
 
 """
 CSVUploadView: Django APIView to handle the upload of a CSV file, process its data types, 
@@ -38,6 +40,7 @@ Example Usage:
 - The server returns the processed CSV file for the user to download.
 """
 
+@csrf_exempt
 class CSVUploadView(APIView):
     def post(self, request, *args, **kwargs):
         # Receive and process the uploaded file
@@ -84,7 +87,7 @@ Example Usage:
 - The processed data and its data type dict are stored for future operations.
 - The front-end receives a user-friendly dict of the inferred data types for display or further editing.
 """
-
+@csrf_exempt
 class CSVTypesView(APIView):
     def post(self, request, *args, **kwargs):
         # Receive and process the uploaded file
@@ -140,6 +143,7 @@ Example Usage:
 - The back-end processes these changes, updates the DataFrame, and provides the modified CSV for download.
 """
 
+@csrf_exempt
 class CSVSaveViewAndDownload(APIView):
     def post(self, request, *args, **kwargs):
         # Retrieve the updated data type dict as a JSON string from the request
