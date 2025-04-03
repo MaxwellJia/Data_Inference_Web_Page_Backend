@@ -57,7 +57,7 @@ Follow these steps to start the backend of the project (in local terminal):
 6. Start upload the file and convert
 
 ## Web Page Screen Shot
-![img](img.png)
+![img](DataInferenceFE.PNG)
 
 ## Development Methodologies
 How Django is deployed and how to convert data is in [Development_Methodologies](Development_Methodologies.MD)
